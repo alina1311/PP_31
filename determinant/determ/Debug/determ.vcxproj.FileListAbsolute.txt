@@ -1,0 +1,2 @@
+C:\PP_31\determinant\determ\Debug\determ.exe
+C:\PP_31\determinant\determ\Debug\determ.pdb

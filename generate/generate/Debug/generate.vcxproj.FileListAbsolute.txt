@@ -1,0 +1,2 @@
+C:\PP_31\generate\generate\Debug\generate.exe
+C:\PP_31\generate\generate\Debug\generate.pdb

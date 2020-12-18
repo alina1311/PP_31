@@ -1,0 +1,7 @@
+﻿  main.cpp
+C:\PP_31\Method_of_Gaus\Gaus\main.cpp(73,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\PP_31\Method_of_Gaus\Gaus\main.cpp(86,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\PP_31\Method_of_Gaus\Gaus\main.cpp(120,8): warning C4101: path: неиспользованная локальная переменная
+  read2.cpp
+  Создание кода...
+  Gaus.vcxproj -> C:\PP_31\Method_of_Gaus\Gaus\Debug\Gaus.exe

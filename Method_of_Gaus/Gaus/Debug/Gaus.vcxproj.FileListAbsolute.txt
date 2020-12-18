@@ -1,0 +1,2 @@
+C:\PP_31\Method_of_Gaus\Gaus\Debug\Gaus.exe
+C:\PP_31\Method_of_Gaus\Gaus\Debug\Gaus.pdb
