@@ -58,7 +58,7 @@ int not_main(std::string path) {
 		+ (det_img[s] - det_img[0]) * (det_img[s] - det_img[0])) / 2;
 
 	std::ofstream fout;
-	fout.open("result_7.txt", std::ios_base::app);
+	fout.open("result_57.txt", std::ios_base::app);
 	fout << r << "\n";
 	return 0;
 }

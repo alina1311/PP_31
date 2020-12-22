@@ -35,7 +35,7 @@ void Triangular(Matrix& m, int n) {
 			}
 		}
 	}
-
+	/*
 	for (int i = n-2; i >= 0; i--)
 	{
 		for (int j = i+1; j < n+1; j++)
@@ -46,6 +46,13 @@ void Triangular(Matrix& m, int n) {
 			}
 		}
 	}
+	*/
+	m[1][3] = m[1][3] - m[1][2] * m[2][3];
+	m[1][2] = 0;
+	m[0][3] = m[0][3] - m[0][2] * m[2][3];
+	m[0][2] = 0;
+	m[0][3] = m[0][3] - m[0][1] * m[1][3];
+	m[0][1] = 0;
 }
 
 int not_main(std::string path) {
@@ -111,7 +118,7 @@ int not_main(std::string path) {
 	rad = abs((sqrt(max) - sqrt(min))) / 2;
 
 	std::ofstream fout;
-	fout.open("result_8.txt", std::ios_base::app);
+	fout.open("result_real_310.txt", std::ios_base::app);
 	fout << rad << "\n";
 	return 0;
 }

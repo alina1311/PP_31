@@ -66,7 +66,7 @@ void correct_i(int n, Matrix& a, Matrix& b, int i, int j) {
 	b[i][j] = { c.real(), dig - (dig * n * 0.001) };
 }
 
-void write3x(int i) {
+void write3x(int i) {    //определитель
 	std::string s = "matrix";
 	char num[5];
 	_itoa(i, num, 10);
@@ -75,14 +75,13 @@ void write3x(int i) {
 	std::ofstream fout;
 	fout.open(s);
 	Matrix a(3, 3);
-	a[0] = { {2, 2}, {3, 3} , {4,4} };
-	a[1] = { {2, 2}, {6,6} , {7, 7} };
-	a[2] = { {2, 2}, {9, 9} , {10, 10} };
+	a[0] = { {2, 1}, {3, 5} , {4,1} };
+	a[1] = { {4, 3}, {3,6} , {5, 7} };
+	a[2] = { {2, 5}, {7, 9} , {11, 9} };
 	Matrix b(a);
 
-	correct(i, a, b, 2, 0);
-	correct(i, a, b, 1, 1);
-	correct(i, a, b, 1, 0);
+	//correct(i, a, b, 1, 2);
+	//correct(i, a, b, 2, 1);
 
 	fout << 3 << "\n";
 	for (int i = 0; i < 3; i++)
@@ -109,7 +108,7 @@ void write3x(int i) {
 	}
 }
 
-void write34(int i, int mode, bool complex) {
+void write34(int i, bool image) {
 	std::string s = "matrix";
 	char num[5];
 	_itoa(i, num, 10);
@@ -118,17 +117,20 @@ void write34(int i, int mode, bool complex) {
 	std::ofstream fout;
 	fout.open(s);
 	Matrix a(3, 4);
-	a[0] = { {2, 2}, {3, 3} , {4,4}, {11, 11} };
-	a[1] = { {2, 2}, {6,6} , {7, 7} ,{12, 12} };
-	a[2] = { {2, 2}, {9, 9} , {10, 10}, {13, 13} };
+	a[0] = { {2, 2}, {4, 3} , {5,4}, {9, 11} };
+	a[1] = { {3, 1}, {4,6} , {7, 7} ,{11, 12} };
+	a[2] = { {4, 3}, {6, 9} , {11, 10}, {11, 13} };
 	Matrix b(a);
-	if (!complex)
+
+
+	if (!image)
 	{
-		correct(i, a, b, mode, 0);
+		correct(i, a, b,2, 3);
 	}
 	else {
-		correct_i(i, a, b, mode, 0);
+		correct_i(i, a, b, 0, 0);
 	}
+
 
 	fout << 3 << "\n";
 	for (int i = 0; i < 3; i++)
@@ -153,7 +155,7 @@ void write34(int i, int mode, bool complex) {
 		}
 		fout << "\n";
 	}
-}
+}  //метод гаусса для м и д
 
 void write34x(int i) {
 	std::string s = "matrix";
@@ -164,14 +166,14 @@ void write34x(int i) {
 	std::ofstream fout;
 	fout.open(s);
 	Matrix a(3, 4);
-	a[0] = { {2, 2}, {3, 3} , {4,4}, {11, 11} };
-	a[1] = { {2, 3}, {6,6} , {7, 7} ,{12, 12} };
-	a[2] = { {2, 4}, {9, 9} , {10, 10}, {13, 13} };
+	a[0] = { {2, 2}, {4, 3} , {5,4}, {9, 11} };
+	a[1] = { {3, 1}, {4,6} , {7, 7} ,{11, 12} };
+	a[2] = { {4, 3}, {6, 9} , {11, 10}, {11, 13} };
 	Matrix b(a);
 
 	correct(i, a, b, 0, 3);
-	correct(i, a, b, 1, 3);
-	correct(i, a, b, 2, 3);
+	correct(i, a, b,2, 2);
+	//correct(i, a, b, 2, 1);
 
 	fout << 3 << "\n";
 	for (int i = 0; i < 3; i++)
@@ -196,12 +198,14 @@ void write34x(int i) {
 		}
 		fout << "\n";
 	}
-}
+}//метод гаусса для действ
 
 int main() {
 	for (int i = 0; i < 100; i++)
 	{
+		//write3x(i); 
 		write34x(i);
+		//write34(i, false);
 	}
 	return 0;
 }

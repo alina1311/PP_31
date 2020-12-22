@@ -1,6 +1,4 @@
 ﻿  main.cpp
 C:\PP_31\determinant\determ\main.cpp(44,20): warning C4018: <: несоответствие типов со знаком и без знака
 C:\PP_31\determinant\determ\main.cpp(67,8): warning C4101: path: неиспользованная локальная переменная
-  read_matrix.cpp
-  Создание кода...
   determ.vcxproj -> C:\PP_31\determinant\determ\Debug\determ.exe

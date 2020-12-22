@@ -11,7 +11,8 @@
 
 #define MAX_MATRIX_CACHE 100
 
-#include "C:\PP_31\library\include\matrix2.hxx"<double> Complex;
+#include "C:\PP_31\library\include\matrix2.hxx"
+typedef std::complex<double> Complex;
 
 typedef techsoft::matrix<Complex> Matrix;
 
